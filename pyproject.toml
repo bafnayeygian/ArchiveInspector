@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "archiveinspector"
+version = "1.0.0"
+description = "Inspect ZIP and TAR archives without extracting them, including size totals, extension stats, and path-safety warnings."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "ArchiveInspector contributors"}]
+
+[project.scripts]
+archive-inspector = "archive_inspector.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/ArchiveInspector"
+Issues = "https://github.com/bafnayeygian/ArchiveInspector/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
